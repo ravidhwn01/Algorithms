@@ -14,21 +14,44 @@
 #include<math.h>
 using namespace std;
 
+// int main(){
+
+// int n;
+// cin>>n;
+
+// int ans=0;
+// int i=0;
+// while (n != 0)
+// {
+//     int bit = n & 1;
+//     ans=(bit *    pow(10,i) ) + ans;
+//     n = n >> 1;
+//     i++;
+// }
+// cout<<" Answer is " << ans  <<endl;
+
+
+// }
+
+
 int main(){
-
-int n;
-cin>>n;
-
-int ans=0;
-int i=0;
-while (n != 0)
-{
-    int bit = n & 1;
-    ans=(bit *    pow(10,i) ) + ans;
-    n = n >> 1;
-    i++;
-}
-cout<<" Answer is " << ans  <<endl;
-
-
+    // for (int i = 0; i<=15; i+=2)
+    // {
+       
+    //     if ((i&1))
+    //     {
+    //          cout<<i<<" ";
+    //         continue;
+    //     }
+       
+    //     i++;
+    // }
+    
+    for(int i = 0;i<5;i++){
+        for (int j = 0; j <= 5; j++)
+        {
+            cout<<i<<" "<<j<<endl; 
+        }
+        
+    }
 }
