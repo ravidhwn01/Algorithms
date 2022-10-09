@@ -2,20 +2,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 bool isPowerOfTwo(int n){
-    for (int i = 0; i < 30; i++)
+    int ans = 1;
+    for (int i = 0; i <= 30; i++)
     {
-         if(pow(2,i)==n){
-            return true;
+         if(ans==n){
+            return true;  // we can use pow func but it is not optimize solution
          }
+         if(ans<INT_MAX/3)
+         ans = ans*3;
     }
     return false;
     
 }
 int main()
 {
-         
+        int t;
+        cin>>t; 
 
-  cout<<isPowerOfTwo(16);
+  cout<<isPowerOfTwo(t);
 
     return 0;
 }
