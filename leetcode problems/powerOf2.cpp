@@ -19,6 +19,7 @@ int main()
         int t,k;
         cout<<"enter number is Power Of k  : ";
         cin>>t; 
+        
         cout<<" enter the value of k ";
         cin>>k; 
 
