@@ -23,6 +23,16 @@ int min(int* arr,int l){
     }
     return min;
 }
+int sumOfArray(int* arr,int l){
+    int sumofarr = 0;
+
+    for (int i = 0; i < l; i++)
+    {
+        sumofarr = sumofarr+arr[i];
+        
+    }
+    return sumofarr;
+}
 int main()
 {
     int  size;
@@ -34,6 +44,7 @@ int main()
     }
     cout<<"max :"<<max(arr,size)<<endl;
     cout<<"min :"<<min(arr,size)<<endl;
+    cout<<"sum :"<<sumOfArray(arr,size)<<endl;
 
     
     return 0;
