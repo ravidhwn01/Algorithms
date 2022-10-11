@@ -9,18 +9,26 @@ int printarray(int *a, int n)
     }
     cout << endl;
 }
+void swapAlternate(int *A, int l1)
+{
+    for (int i = 0; i < l1; i += 2)
+    {
+        if (i + 1 < l1)
+        {
+            swap(A[i], A[i + 1]);
+        }
+    }
+}
 int main()
 {
-  int arr1[] = {1, 2, 6, 8, 5};
-  int l1 = sizeof(arr1) / sizeof(arr1[0]);
+    int even[] = {1, 2, 6, 8, 5, 4};
+    int odd[] = {1, 2, 6, 8, 5};
+    int l1 = sizeof(even) / sizeof(even[0]);
+    int l2 = sizeof(odd) / sizeof(odd[0]);
+    swapAlternate(even, l1);
+    printarray(even, l1);
+    swapAlternate(odd, l2);
+    printarray(odd, l2);
 
-  for (int i = 0; i < l1;i+=2)
-  {
-    if(i+1<l1){
-        swap(arr1[i],arr1[i+1]);
-    }
-  }
-  printarray(arr1,l1);
-  
     return 0;
 }
