@@ -14,6 +14,7 @@ bool lS(int* arr, int l, int k){
 int main()
 {
     int arr[]={234,4434,5345,45,454,54,6,6};
+     cout<<" Enter the key : "<<endl;
     int key;
     cin>>key;
 bool found = lS(arr,8,key);
