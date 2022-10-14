@@ -38,41 +38,13 @@ int partition(int *arr, int low, int high)
     arr[j] = temp;
     return j;
 }
-int partitionlast(int *arr, int low, int high)
-{
-    int pivot = arr[high];
-    int i = low;
-    int j = high - 1;
-    int temp;
 
-    do
-    {
-        while (arr[i] > pivot)
-        {
-            i++;
-        }
-        while (arr[j] <= pivot)
-        {
-            j--;
-        }
-        if (i < j)
-        {
-            temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
-    } while (i < j);
-    // temp = arr[low];
-    // arr[low] = arr[j];   // not working
-    // arr[j] = temp;
-    // return j;
-}
 void quickSort(int *arr, int low, int high)
 {
     int pivotIndex;
     if (low < high)
     {
-        // pivotIndex = partitionlast(arr, low, high);
+        
         pivotIndex = partition(arr, low, high);
         quickSort(arr, low, pivotIndex - 1);
         quickSort(arr, pivotIndex + 1, high);
