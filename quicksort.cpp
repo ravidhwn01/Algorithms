@@ -11,20 +11,20 @@ void printarray(int *arr, int n)
 int partition(int *arr, int low, int high)
 {
     int pivot = arr[low];
-    int i = low + 1;
-    int j = high;
+    int i = low - 1;
+    int j = high+1;
     int temp;
     do
     {
 
-        while (arr[i] <= pivot)
+        do 
         {
             i++;
-        }
-        while (arr[j] > pivot)
+        }while(arr[i]<=pivot);
+        do
         {
             j--;
-        }
+        }while(arr[j]>pivot);
         if (i < j)
         {
             temp = arr[i];
@@ -54,7 +54,7 @@ int main()
 {
 
     // int arr[] = {18, 7 ,5, 2 ,1};
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    int arr[] = {1, 2, 3, 467, 500, 60, 70, 8,234,6,7,8,5,4,3,2,1,1,32,4,19, 2};
     int length = sizeof(arr) / sizeof(arr[0]);
     printarray(arr, length);
     quickSort(arr, 0, length - 1);
