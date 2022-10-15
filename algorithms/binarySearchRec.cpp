@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+// complexity is O(log(N)) 😋😊🤩
 int printarray(int *a, int n)
 {
     for (int i = 0; i < n; i++)
@@ -38,9 +39,12 @@ return -1;
 int main()
 {
     int arr[] = {
-        1,2,3,4,5,6,7,8,9
+        1,2,3,4,5,6,7,8,9,324,5,3,3,5,5,6,6,76,7,73,5,6,6,7,77,5,44,4,4
     };
     int l = sizeof(arr) / sizeof(arr[0]);
+    cout<<"number of element: "<<l<<endl;
+    printarray(arr,l);
+    sort(arr, arr + l);
     printarray(arr,l);
   int index =   binarySearch(arr, 0, l, 7);
   cout<<index;
