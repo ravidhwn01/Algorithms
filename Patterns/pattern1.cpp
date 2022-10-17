@@ -9,13 +9,23 @@ int main()
     while (i<=n)
     {
         int j = 1;
-        while(j<=n){
-            cout<<" * "; //rows m col create karega!
+        while(j<=i){
+            cout<<j+i-1; //rows m col create karega!
             j++;
         }
         cout<<endl;
         i++;
     }
+    // while (i<=n)
+    // {
+    //     int j = 1;
+    //     while(j<=n){
+    //         cout<<" * "; //rows m col create karega!
+    //         j++;
+    //     }
+    //     cout<<endl;
+    //     i++;
+    // }
     
     return 0;
 }

@@ -2,6 +2,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 //  working
+int getPivot(int arr[], int n)
+{
+
+    int s = 0;
+    int e = n - 1;
+    int mid = s + (e - s) / 2;
+    while (s < e)
+    {
+
+        if (arr[mid] >= arr[0])
+        {
+
+            s = mid + 1;
+        }
+        else
+        {
+
+            e = mid;
+        }
+        mid = s + (e - s) / 2;
+    }
+
+    return s;
+}
 int binarySearch(int *a, int low, int high, int key)
 {
     int l = low;
@@ -28,30 +52,7 @@ int binarySearch(int *a, int low, int high, int key)
     }
     return -1;
 }
-int getPivot(int arr[], int n)
-{
 
-    int s = 0;
-    int e = n - 1;
-    int mid = s + (e - s) / 2;
-    while (s < e)
-    {
-
-        if (arr[mid] >= arr[0])
-        {
-
-            s = mid + 1;
-        }
-        else
-        {
-
-            e = mid;
-        }
-        mid = s + (e - s) / 2;
-    }
-
-    return s;
-}
 int findPosition(int arr[], int n, int k)
 {
     int pivot = getPivot(arr, n);
@@ -67,10 +68,10 @@ int findPosition(int arr[], int n, int k)
 }
 int main()
 {
-    int arr[] = {7, 9,11,12, 1, 2, 3};
+    int arr[] = {7, 9,11,12,45,55, 3,4,5};
     int n = sizeof(arr) / sizeof(arr[0]);
     // cout << getPivot(arr, n);
-    cout << "key element's index: " << findPosition(arr, n, 7);
+    cout << "key element's index: " << findPosition(arr, n, 3);
 
     return 0;
 }
