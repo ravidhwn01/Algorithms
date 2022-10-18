@@ -33,7 +33,10 @@ long long int bs(int n)
 // }
 double fullAns(int n, int fullnum, int integerSol)
 {
-    double factor = 1;
+    double factor = 1; 
+    // 0.1
+    // 0.01
+    // 0.001   we created factor for this  work 
     double ans = integerSol;
     for (int i = 0; i < fullnum; i++)
     {

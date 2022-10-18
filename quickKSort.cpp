@@ -58,7 +58,7 @@ void quickSort(int *a, int low, int high)
 }
 int main()
 {
-    int arr[] = {15, 40, 93, 27, 1};
+    int arr[] = {15, 40, 93, 27,23,56,1,0,8,7,0,8,7,6,5,5,4, 1};
     int length = sizeof(arr) / sizeof(arr[0]);
     printarray(arr, length);
     quickSort(arr, 0, length - 1);
