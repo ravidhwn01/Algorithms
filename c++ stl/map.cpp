@@ -9,6 +9,13 @@ int main()
     m[4] = "ravi ";
     m[6] = "rwan";
     cout<<endl;
+   for (auto &&i : m)
+   {
+    cout<<i.first<<" "<<i.second<<endl;
+   } 
+   cout<<endl;
+  // many operations can be done!
+   
    
     
     return 0;
