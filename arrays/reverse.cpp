@@ -15,11 +15,11 @@ void reverse(int* arr, int l){
 
    while (start<=end)
    {
-    swap(arr[start],arr[end]); 
-    start++;
-    end--;
+    swap(arr[start++],arr[end--]); 
+    // start++;
+    // end--;
    }
-   
+    
     
 
 }
