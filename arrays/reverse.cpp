@@ -1,35 +1,35 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-int printarray(int* a, int n){
-    for (int  i = 0; i < n; i++)
+// print array function
+void printArray(int * arr, int l){
+    for (int i = 0; i < l; i++)
     {
-        cout<<a[i]<<" ";
+        cout<<arr[i]<<" ";
     }
     cout<<endl;
     
 }
-void reverse(int* arr, int l){
-    int start  =0;
-    int end = l-1;
-
-   while (start<=end)
-   {
-    swap(arr[start++],arr[end--]); 
-    // start++;
-    // end--;
-   }
-    
+// reverse function
+void reverseArray(int * arr, int l){
+    int s = 0; // starting index
+    int e  = l-1; // ending index
+    while (s<=e)
+    {
+        swap(arr[s++],arr[e--]);
+    }
     
 
 }
 int main()
 {
-    int arr[]= {1,2,3,4,5,6,7,8,9,0};
+    int arr[] = {1,2,3,4,5,6,7};
+    // size of array
     int l = sizeof(arr)/sizeof(arr[0]);
-    printarray(arr,l);
-    reverse(arr,l);
-    printarray(arr,l);
-    
+    cout<<"size of array is :"<<l<<endl;
+    printArray(arr,l);
+    reverseArray(arr,l);
+    printArray(arr,l);
+
     return 0;
 }
