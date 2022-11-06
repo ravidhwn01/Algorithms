@@ -4,5 +4,7 @@
         "ostream": "cpp",
         "iostream": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true
 }
