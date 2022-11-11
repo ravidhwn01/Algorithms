@@ -24,5 +24,5 @@ int main()
     delete[] arr;  // deleting memory from heap
     arr = NULL;    // declaring arr = NULL
 
-    return 0;
+    return 0; 
 }
