@@ -30,10 +30,19 @@ void insertInListTail(Node *&tail, int d)
 // insertion at middle(at any position)
 void insertInListMiddle(Node *&head, int d, int position)
 {
+    if(position == 1){
+        insertInList(head, d);
+        return;
+    }
     Node *temp = head;
     for (int i = 0; i < position - 1; i++) // going to that position where node will be inserted
     {
         temp = temp->next;
+    }
+    if(temp->next == NULL){
+        cout<<"aa gya yaha pe"<<endl;
+        insertInListTail(head, d);
+        return;
     }
     Node *n = new Node(d);
     n->next = temp->next;
@@ -68,6 +77,7 @@ cout<<"insertion at tail(end) " <<endl;
     printList(head);
 cout<<"insertion at any position " <<endl;
     insertInListMiddle(head, 100, 3);
+    insertInListMiddle(head, 67, 8);
     printList(head);
 
     return 0;
